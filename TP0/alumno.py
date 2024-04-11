@@ -13,7 +13,6 @@
 #     y un índice, valide (devuelva True o False) si dicho índice corresponde al del alumno 
 #     más bajo de la fila. (Aclaración: esto debería poder realizarse en tiempo constante)
 
-# (*)
 # Los alumnos son de la forma:
 
 # alumno {
