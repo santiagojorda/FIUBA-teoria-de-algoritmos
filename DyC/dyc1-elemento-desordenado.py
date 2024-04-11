@@ -48,16 +48,18 @@ def dividir_y_encontrar_desubicado(arr, inicio, final):
 # CASO 1
 arr = [2, 4, 6, 8, 10, 9, 12, 14]
 elemento = elemento_desordenado(arr)
-print("\n\n- CASO 1\n", 
-      "[2, 4, 6, 8, 10, 9, 12, 14]\n", 
-      "Elemento fuera de lugar esperado: 10\n",
-      "Elemento fuera de lugar calculado:", elemento, "\n\n")
+print("\n",
+      "- CASO 1\n", 
+      f"{arr} \n", 
+      f"Elemento fuera de lugar esperado: 10 \n",
+      f"Elemento fuera de lugar calculado: {elemento} \n\n")
 
 
 # CASO 2
 arr = [2, 5, 3]
 elemento = elemento_desordenado(arr)
-print("\n\n- CASO 2\n", 
-      "[2, 5, 3]\n", 
-      "Elemento fuera de lugar esperado: 5\n",
-      "Elemento fuera de lugar calculado:", elemento, "\n\n")
+print("\n",
+      "- CASO 2\n", 
+      f"{arr} \n", 
+      f"Elemento fuera de lugar esperado: 5 \n",
+      f"Elemento fuera de lugar calculado: {elemento} \n\n")
