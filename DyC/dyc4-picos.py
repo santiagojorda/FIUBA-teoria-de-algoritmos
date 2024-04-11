@@ -31,7 +31,35 @@ def posicion_pico(arr, inicio, final):
 
 
 
-# tests
+# ANALISIS DE COMPLEJIDAD
+# A T(n/B) + O(n^c)
+
+# En este ejercicio aplico la busqueda binaria
+# A es la cantidad de llamadas recursivas que tengo en mi algoritmo
+# se puede ver que hay una ya que se llama en la linea 10 o en la linea 12, nunca juntas
+# A = 1
+
+# B es la proporcion a la que subdivido el arreglo en cada llamado recursivo
+# Como estoy dividiendo a la mitad: T(n/2) 
+
+# En el siguiente termino O(n^c) se hace referencia al costo de las operaciones restantes del algoritmo, tales como comparacion, asignacion, una divicion y retorno, siendo asi O(1) = O(n^C) => C = 0
+
+# A = 1
+# B = 2
+# C = 0
+
+# Quedando asi la expresion AT(n/B) + O(n^c) = 1T(n/2) + O(1)
+
+# Aplicando el TEOREMA DE MAESTRO
+# si log_B(A) = log_2(1) = 0 = C 
+# => T(n) = O(n^C * log_B(n)) = O(log_2(n)) = O(log(n))
+
+# Quedando asi el orden de complejidad del algoritmo: 
+# T(n) = O(log(n))
+
+
+
+# TESTS
 
 def ejecutar_tests(lista_tests, funcion):    
     exitos = 0
