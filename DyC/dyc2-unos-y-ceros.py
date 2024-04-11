@@ -17,7 +17,9 @@ def indice_primer_cero(arr):
 def obtener_indice_primer_cero_del_par(arr, izq, der):
     if arr[izq] == CERO:
         return izq
-    return der
+    if arr[der] == CERO:
+        return der
+    return NO_HAY_CERO
     
 
 def dividr_y_obtener_indice_primer_cero(arr, inicio, final):
@@ -38,30 +40,36 @@ def dividr_y_obtener_indice_primer_cero(arr, inicio, final):
         return dividr_y_obtener_indice_primer_cero(arr, medio+1, final)
 
 
+# TESTS
 
-# CASO 1
-arr = [1, 1, 1, 0, 0, 0, 0, 0]
-indice = indice_primer_cero(arr)
-print("\n",
-      "- CASO 1\n", 
-      f"{arr} \n", 
-      f"Indice esperado: 3\n",
-      f"Indice calculado: {indice} \n\n")
+def tests(lista_tests):
+    exitos = 0
+    fallos = 0
 
-# CASO 2
-arr = [1, 1, 0, 0, 0, 0]
-indice = indice_primer_cero(arr)
-print("\n",
-      "- CASO 2\n", 
-      f"{arr} \n", 
-      f"Indice esperado: 2\n",
-      f"Indice calculado: {indice} \n\n")
+    for i, test in enumerate(lista_tests): 
+        arr, indice_esperado = test
+        indice_obtenido = indice_primer_cero(arr)
+        print("\n",
+            f"- CASO {i + 1}\n", 
+            f"Numero: {arr} \n", 
+            f"Indice esperado: {indice_esperado} \n",
+            f"Indice calculado: {indice_obtenido} \n\n")
+        if indice_esperado == indice_obtenido:
+            exitos = exitos + 1
+        else:
+            fallos = fallos + 1
 
-# CASO 3
-arr = [1, 1, 1, 1, 1]
-indice = indice_primer_cero(arr)
-print("\n",
-      "- CASO 3\n", 
-      f"{arr} \n", 
-      f"Indice esperado: {NO_HAY_CERO} \n",
-      f"Indice calculado: {indice} \n\n")
+    print(f"RESUMEN TESTS \n",
+          f"    Exitos: {exitos} \n",
+          f"    Fallos: {fallos} \n")
+
+
+arr_3 = [1, 1, 1, 0, 0, 0, 0, 0]
+arr_2 = [1, 1, 0, 0, 0, 0]
+arr_sin_ceros = [1, 1, 1, 1, 1]
+lista_tests = [
+    [arr_3, 3],
+    [arr_2, 2],
+    [arr_sin_ceros, NO_HAY_CERO]
+]
+tests(lista_tests)

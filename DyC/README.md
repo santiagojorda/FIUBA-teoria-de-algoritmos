@@ -1,4 +1,4 @@
-# Clase: Division y Conquista Avanzada
+# Notas: Division y Conquista Avanzada
 
 Fecha: 15 de marzo de 2024 9:52
 Materia: Teoria de Algoritmos
