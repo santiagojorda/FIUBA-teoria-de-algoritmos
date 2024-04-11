@@ -1,4 +1,7 @@
-### Algoritmos: Division y Conquista
+# Clase: Division y Conquista Avanzada
+
+Fecha: 15 de marzo de 2024 9:52
+Materia: Teoria de Algoritmos
 
 [2024-03-14 - TDA - División y Conquista Avanzada](https://www.youtube.com/watch?v=22h0kOTKZ0c&list=PLLfC2vEod54Iwg2t684y_fRoBVavY1HjR&index=3&t=8s&ab_channel=AlgoritmosFiubaCursoBuchwald)
 
@@ -78,7 +81,7 @@ $T(n) = AT(n/B) + f(n)$
 
 **Casos de f(n)**
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/89c36a8a-a367-4dc3-a2a9-fab688ef6a52/bada76c3-56fc-4ed0-a5fe-23461140b106/Untitled.png)
+![Untitled](Clase%20Division%20y%20Conquista%20Avanzada%202a6cb7d29e76454dbe39b0dc515aee36/Untitled.png)
 
 Ejemplo) $T(n) = 2T(n/2) + log n$
 
