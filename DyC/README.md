@@ -68,9 +68,9 @@ $AT(n/B) + O(n^c)$
 
 si $log_b(A)$:
 
-- < C   ⇒   $T(n) = O(n^c)$
-- = C   ⇒   $T(n) = O(n^c log_b(n)) = O(n^clog(n))$
-- > C   ⇒   T(n) = O(n^ log_b(A) )
+- $<$ C   ⇒   $T(n) = O(n^c)$
+- $=$ C   ⇒   $T(n) = O(n^c log_b(n)) = O(n^clog(n))$
+- $>$ C   ⇒   $T(n) = O(n^(log_b(A)) ) => Si A = B => T(n) = O(n)$
 
 ### Teorema Maestro general (poco probable)
 
