@@ -113,7 +113,6 @@ def ejecutar_tests(lista_tests, funcion):
           f"    Exitos: {exitos} \n",
           f"    Fallos: {fallos} \n")
 
-# numero, raiz esperado
 horarios1 = [(5, 10), (12, 15)]
 horarios2 = [(2, 15), (3, 7), (1, 11), (6, 9), (10, 13), (5, 8), (12, 25), (17, 22), (16, 18), (14, 15), (14, 20)]
 horarios3 = [(5, 10)]
