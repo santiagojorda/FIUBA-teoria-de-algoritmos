@@ -12,6 +12,10 @@
 
 # ---------------------------
 
+# La característica principal de los algoritmos greedy es que toman decisiones locales óptimas
+# en cada paso con la esperanza de encontrar una solución global óptima. 
+# Esto significa que en cada paso, el algoritmo elige la mejor opción disponible en ese momento 
+# sin considerar las consecuencias a largo plazo.
 # Un algoritmo greedy puede o no encontrar la solucion optima
 # En caso de que la encuentre, a este se le llama "canonico"
 
