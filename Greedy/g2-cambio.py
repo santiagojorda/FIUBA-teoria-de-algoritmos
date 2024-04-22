@@ -87,7 +87,6 @@ def ejecutar_tests(lista_tests, funcion):
           f"    Exitos: {exitos} \n",
           f"    Fallos: {fallos} \n")
 
-# numero, raiz esperado
 monedas1 = [1, 2, 5]
 monto1 = 11
 
@@ -102,6 +101,7 @@ monto4 = 11
 
 monedas5 = [1, 2, 4, 5, 10]
 monto5 = 8
+
 tests = [
     [monedas1, monto1, [5, 5, 1]],
     [monedas2, monto2, []],
