@@ -12,25 +12,22 @@ def obtener_camino(grafo):
         return None
     for vi in vertices:
         camino = []
-        visitados = []
-        if camino_hamiltoniano_dfs(grafo, vertices, vi, camino, visitados):
+        if camino_hamiltoniano_dfs(grafo, vertices, vi, camino):
             return camino
     return None
 
-def camino_hamiltoniano_dfs(grafo, vertices, v_actual, camino, visitados):
-    visitados.append(v_actual)
+def camino_hamiltoniano_dfs(grafo, vertices, v_actual, camino):
     camino.append(v_actual)
 
-    if len(visitados) == len(vertices):
+    if len(camino) == len(vertices):
         return True
     
     adyaentes = grafo.adyacentes(v_actual)
     for ady in adyaentes:
-        if ady not in visitados:
-            if camino_hamiltoniano_dfs(grafo, vertices, ady, camino, visitados):
+        if ady not in camino:
+            if camino_hamiltoniano_dfs(grafo, vertices, ady, camino):
                 return True
     camino.remove(v_actual)
-    visitados.remove(v_actual)
     return False 
 
 
