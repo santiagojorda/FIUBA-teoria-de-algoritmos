@@ -1,6 +1,11 @@
 # Implementar un algoritmo que dado un Grafo no dirigido nos devuelva un 
 # conjunto de vértices que representen un máximo Independent Set del mismo.
 
+# Nota
+# no importa si ya visite un vertice, lo puedo volver a visitar,
+# total lo unico que me importa de este algoritmo es
+# es bajar la cantidad de operacioens y que no sea fuerza bruta con 2 arrays recorriendo toda la lista
+
 from grafo import *
 
 # --- CODE
