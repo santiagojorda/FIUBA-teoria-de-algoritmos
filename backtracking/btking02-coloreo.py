@@ -52,44 +52,44 @@ class Grafo_no_dirigido_sin_peso:
 
 # ---
 
-def compatible(grafo, vertices, colores, vi, n):
-    v_actual = vertices[vi]
-    adyacentes = grafo.adyacentes(v_actual)
+# def colorear(grafo, n):
+#     vertices = grafo.obtener_vertices()
+#     tam = len(vertices)
+    
+#     if tam == 0:
+#         return True
 
-    for ady in adyacentes:
-        ady_index = vertices.index(ady)
+#     colores = []
+#     vi = 0
+
+#     if coloreo(grafo, vertices, colores, vi, n):
+#         return True
+#     return False
+
+# def compatible(grafo, vertices, colores, vi, n):
+#     v_actual = vertices[vi]
+#     adyacentes = grafo.adyacentes(v_actual)
+
+#     for ady in adyacentes:
+#         ady_index = vertices.index(ady)
         
-        if ady_index < vi and colores[ady_index] == colores[vi]:
-            return False
-    return True
+#         if ady_index < vi and colores[ady_index] == colores[vi]:
+#             return False
+#     return True
 
-def coloreo(grafo, vertices, colores, vi, n):
-    if vi >= len(vertices):
-        return True
+# def coloreo(grafo, vertices, colores, vi, n):
+#     if vi >= len(vertices):
+#         return True
 
-    for color in range(1, n+1):
-        colores.append(color)
+#     for color in range(1, n+1):
+#         colores.append(color)
 
-        if compatible(grafo, vertices, colores, vi, n):
-            if coloreo(grafo, vertices, colores, vi+1, n):
-                return True
-        colores.pop()
-    return False
+#         if compatible(grafo, vertices, colores, vi, n):
+#             if coloreo(grafo, vertices, colores, vi+1, n):
+#                 return True
+#         colores.pop()
+#     return False
     
-
-def colorear(grafo, n):
-    vertices = grafo.obtener_vertices()
-    tam = len(vertices)
-    
-    if tam == 0:
-        return True
-
-    colores = []
-    vi = 0
-
-    if coloreo(grafo, vertices, colores, vi, n):
-        return True
-    return False
 
 
 
