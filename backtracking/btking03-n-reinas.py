@@ -31,16 +31,16 @@ def es_seguro(tablero, fila, col, N):
     
     return True
 
-def resolver_n_reinas_util(tablero, fila, N, reinas):
-    if fila >= N:
+def resolver_n_reinas_util(tablero, fila, n, reinas):
+    if fila >= n:
         return True
     
-    for col in range(N):
-        if es_seguro(tablero, fila, col, N):
+    for col in range(n):
+        if es_seguro(tablero, fila, col, n):
             tablero[fila][col] = 1
             reinas.append((fila, col))
 
-            if resolver_n_reinas_util(tablero, fila+1, N, reinas):
+            if resolver_n_reinas_util(tablero, fila+1, n, reinas):
                 return True
             
             # Si colocar la reina en tablero[fila][col] no conduce a una solución, retroceder
