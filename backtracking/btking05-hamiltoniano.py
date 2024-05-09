@@ -1,3 +1,5 @@
+# Un camino hamiltoniano, es un camino de un grafo, que visita todos los vértices del grafo una sola vez.
+# Implementar un algoritmo por backtracking que encuentre un camino hamiltoniano de un grafo dado.
 
 # NOTAS
 # Recorrer todo el grafo pasando 1 vez por cada vertice
@@ -5,6 +7,8 @@
 # al hacer esto, hago un dfs?
 
 from grafo import *
+
+# --- CODE
 
 def obtener_camino(grafo):
     vertices = grafo.obtener_vertices()
