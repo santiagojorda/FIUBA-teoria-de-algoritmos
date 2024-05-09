@@ -25,11 +25,11 @@ def funcion_a_testear(argumentos):
     pass
 
 
-datos_iniciales1 = []
-esperado1 = False
-tests = [
-    [[datos_iniciales1], esperado1],
-    [[datos_iniciales1], esperado1],
-]
+# datos_iniciales1 = []
+# esperado1 = False
+# tests = [
+#     [[datos_iniciales1], esperado1],
+#     [[datos_iniciales1], esperado1],
+# ]
 
-ejecutar_tests(tests, funcion_a_testear)
+# ejecutar_tests(tests, funcion_a_testear)

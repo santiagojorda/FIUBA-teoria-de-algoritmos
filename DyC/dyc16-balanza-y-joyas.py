@@ -14,12 +14,11 @@
 # Si el primer platillo es más pesado, balanza devuelve 1.
 # Si el segundo platillo es más pesado, balanza devuelve -1.
 
-# --- 
+# --- DEPENDENCIAS
+
+from utils.tests import *
 
 # balanza ES UNA FUNCION EXTERNA
-# from balanza import * 
-
-
 PESAN_LO_MISMO = 0
 PRIMER_PLATILLO_MAS_PESADO = 1
 SEGUNDO_PLATILLO_MAS_PESADO = -1
@@ -34,6 +33,10 @@ def balanza(arr1, arr2):
         return SEGUNDO_PLATILLO_MAS_PESADO
     else:
         return PESAN_LO_MISMO
+    
+# --- CODE 
+
+# from balanza import * 
 
 def tiene_tam_par(inicio, final):
     return (final - inicio + 1) % 2 == 0
@@ -70,41 +73,8 @@ def encontrar_joya(joyas):
     return cantidad_pesajes
 
 
-
-
-
-
-
 # --- TESTS 
-
-def ejecutar_tests(lista_tests, funcion):    
-    exitos = 0
-    fallos = 0
-
-    for i, test in enumerate(lista_tests): 
-        datos_iniciales, esperado = test
-        calculado = funcion(datos_iniciales)
-        print("\n",
-            f"- CASO {i + 1}\n", 
-            f"Datos iniciales: {datos_iniciales} \n", 
-            f"Esperado: {esperado} \n",
-            f"Calculado: {calculado}")
-        if calculado == esperado:
-            exitos = exitos + 1
-            print("--------- EXITO\n")
-        else:
-            print("--------- FALLO\n")
-            fallos = fallos + 1
-
-    print(f"\nRESUMEN TESTS \n",
-          f"    Exitos: {exitos} \n",
-          f"    Fallos: {fallos} \n")
     
-
-PESAN_LO_MISMO = 0
-PRIMER_PLATILLO_MAS_PESADO = 1
-SEGUNDO_PLATILLO_MAS_PESADO = -1
-
 tests = [
     [[], 0],
     [[1,0], 0],

@@ -4,8 +4,7 @@
 # Nota: el ejercicio puede resolverse sin el uso de Grafos, pero en caso de querer utilizarlo,
 # está disponible como se describe.
 
-# --- 
-
+# --- CODE
 
 def es_seguro(tablero, fila, col, N):
     # Verifica si hay una reina en la misma columna
@@ -54,5 +53,7 @@ def nreinas(n):
     reinas = []
     resolver_n_reinas_util(tablero, 0, n, reinas)
     return reinas
+
+# --- TEST
 
 nreinas(2)
