@@ -1,5 +1,5 @@
 # Teoria de Algoritmos
-Repositorio de material para Teoria de Algoritmos (75.29), 2024C1, Facultad de Ingeniería de la Universidad de Buenos Aires
+Repositorio con material para Teoria de Algoritmos (75.29), 2024C1, Facultad de Ingeniería de la Universidad de Buenos Aires
 
 ### Links
 - 📔 [Mi Notion](https://sjorda.notion.site/Teoria-de-Algoritmos-c30b2910d57641a593275c8a314bd831?pvs=74)
