@@ -26,19 +26,38 @@ from grafo import *
 # ---
 
 def no_adyacentes(grafo, n):
-
     vertices = grafo.obtener_vertices()
-    solucion = []
-    visitados = []
+    if len(vertices) <= 1:
+        return False
+    
+    visitados = []  # contiene vertices
+    colores = []    # contiene numeros de colores, correspondiente a cada elemento de visitados
+    return coloreo(grafo, vertices, visitados, colores, n)
 
-    solucion_parcial
-    for vi in vertices: 
-        if backtracking(grafo, vertices, solucion, visitados, vi, n):
-            pass
 
-    if solucion != []:
-        return solucion
-    return None
+def coloreo(grafo, vertices, vi, visitados, colores, n):
+
+    if len(visitados) == len(vertices):
+        if()
+
+
+    pass
+
+
+
+
+    # vertices = grafo.obtener_vertices()
+    # solucion = []
+    # visitados = []
+
+    # solucion_parcial
+    # for vi in vertices: 
+    #     if backtracking(grafo, vertices, solucion, visitados, vi, n):
+    #         pass
+
+    # if solucion != []:
+    #     return solucion
+    # return None
 
 
 
