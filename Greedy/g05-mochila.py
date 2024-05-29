@@ -17,6 +17,10 @@
 # 2- Recorro la lista O(n)
 # T(n) = O(nlogn)
 
+from tests import *
+
+# CODIGO
+
 VALOR = 0
 PESO = 1
 
@@ -67,7 +71,9 @@ def merge(arr, inicio, mitad, final):
         arr[inicio + indice] = val
     return arr
 
-def mochila(elementos, W):
+def mochila(mochila):
+    elementos = mochila[0]
+    W = mochila[1]
     if elementos == []:
         return []
     
@@ -90,35 +96,10 @@ def mochila(elementos, W):
 
 # TESTS 
 
-def ejecutar_tests(lista_tests, funcion):    
-    exitos = 0
-    fallos = 0
-
-    for i, test in enumerate(lista_tests): 
-        valores, peso_maximo, esperado = test
-        calculado = funcion(valores, peso_maximo)
-        print("\n",
-            f"- CASO {i + 1}\n", 
-            f"(Valor, Peso): {valores} \n", 
-            f"Peso maximo: {peso_maximo} \n", 
-            f"Elementos guardados max ganancia esperados: {esperado} \n",
-            f"Elementos guardados para max ganancia calculados: {calculado}")
-        if calculado == esperado:
-            exitos = exitos + 1
-            print("--------- EXITO\n")
-        else:
-            print("--------- FALLO\n")
-            fallos = fallos + 1
-
-    print(f"RESUMEN TESTS \n",
-          f"    Exitos: {exitos} \n",
-          f"    Fallos: {fallos} \n")
-
-
 tests = [
-    [ [], 10, [] ],
-    [ [(5, 10)], 10, [(5,10)] ],
-    [ [(5, 5), (3, 3), (7, 7)], 10, [(7,7), (3,3)] ]
+    [ [[], 10],                             [] ],
+    [ [[(5, 10)], 10],                      [(5,10)] ],
+    [ [[(5, 5), (3, 3), (7, 7)], 10],        [(7,7), (3,3)] ]
 ]
 
 ejecutar_tests(tests, mochila)

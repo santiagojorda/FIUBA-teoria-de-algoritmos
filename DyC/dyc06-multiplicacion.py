@@ -7,6 +7,13 @@
 # Por las características de la herramienta, no podemos verificarlo de forma automática,
 # pero se busca que se implemente con dicha restricción
 
+from tests import *
+
+def ejecutar_multiplicacion(params):
+    return multiplicar(params[0], params[1])
+
+# CODIGO
+
 def multiplicar(a, b):
     return karatsuba(a, b)
 
@@ -38,38 +45,14 @@ def karatsuba(a, b):
 
 # TESTS
 
-def ejecutar_tests(lista_tests, funcion):    
-    exitos = 0
-    fallos = 0
-
-    for i, test in enumerate(lista_tests): 
-        num1, num2 = test
-        esperado = num1 * num2
-        calculado = funcion(num1, num2)
-        print("\n",
-            f"- CASO {i + 1}\n", 
-            f"Numeros: {num1} * {num2}\n", 
-            f"Multiplicacion esperada: {esperado} \n",
-            f"Multiplicacion calculada: {calculado}")
-        if calculado == esperado:
-            exitos = exitos + 1
-            print("--------- EXITO\n")
-        else:
-            print("--------- FALLO\n")
-            fallos = fallos + 1
-
-    print(f"RESUMEN TESTS \n",
-          f"    Exitos: {exitos} \n",
-          f"    Fallos: {fallos} \n")
-
 # numero, raiz esperado
 lista_tests = [
-    [2, 3],
-    [10, 11],
-    [100, 100],
-    [1000, 1000],
-    [200, 200],
-    [412412, 123142],
-    [125125125, 125125125]
+    [[2, 3], 2*3],
+    [[10, 11], 10*11],
+    [[100, 100], 100*100],
+    [[1000, 1000], 1000*1000],
+    [[200, 200], 200*200],
+    [[412412, 123142], 412412*123142],
+    [[125125125, 125125125], 125125125*125125125]
 ]
-ejecutar_tests(lista_tests, multiplicar)
+ejecutar_tests(lista_tests, ejecutar_multiplicacion)

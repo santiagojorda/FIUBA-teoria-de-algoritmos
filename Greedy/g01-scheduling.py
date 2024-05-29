@@ -8,6 +8,9 @@
 # Por las características de la herramienta, no podemos verificarlo de forma automática,
 # pero se busca que se implemente con dicha restricción
 
+from tests import *
+
+# CODIGO
 
 INICIO = 0
 FINALIZACION = 1
@@ -89,29 +92,6 @@ def charlas(horarios):
 
 
 # TESTS 
-
-def ejecutar_tests(lista_tests, funcion):    
-    exitos = 0
-    fallos = 0
-
-    for i, test in enumerate(lista_tests): 
-        horarios, esperado = test
-        calculado = funcion(horarios)
-        print("\n",
-            f"- CASO {i + 1}\n", 
-            f"Horarios: {horarios} \n", 
-            f"Set esperado: {esperado} \n",
-            f"Set calculada: {calculado}")
-        if calculado == esperado:
-            exitos = exitos + 1
-            print("--------- EXITO\n")
-        else:
-            print("--------- FALLO\n")
-            fallos = fallos + 1
-
-    print(f"RESUMEN TESTS \n",
-          f"    Exitos: {exitos} \n",
-          f"    Fallos: {fallos} \n")
 
 horarios1 = [(5, 10), (12, 15)]
 horarios2 = [(2, 15), (3, 7), (1, 11), (6, 9), (10, 13), (5, 8), (12, 25), (17, 22), (16, 18), (14, 15), (14, 20)]

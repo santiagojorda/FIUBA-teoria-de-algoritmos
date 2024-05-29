@@ -6,6 +6,10 @@
 # Por las características de la herramienta, no podemos verificarlo de forma automática, 
 # pero se busca que se implemente con dicha restricción
 
+from tests import *
+
+# CODIGO
+
 CERO = 0
 NO_HAY_CERO = -1
 
@@ -42,28 +46,6 @@ def dividr_y_obtener_indice_primer_cero(arr, inicio, final):
 
 # TESTS
 
-def tests(lista_tests):
-    exitos = 0
-    fallos = 0
-
-    for i, test in enumerate(lista_tests): 
-        arr, indice_esperado = test
-        indice_obtenido = indice_primer_cero(arr)
-        print("\n",
-            f"- CASO {i + 1}\n", 
-            f"Numero: {arr} \n", 
-            f"Indice esperado: {indice_esperado} \n",
-            f"Indice calculado: {indice_obtenido} \n\n")
-        if indice_esperado == indice_obtenido:
-            exitos = exitos + 1
-        else:
-            fallos = fallos + 1
-
-    print(f"RESUMEN TESTS \n",
-          f"    Exitos: {exitos} \n",
-          f"    Fallos: {fallos} \n")
-
-
 arr_3 = [1, 1, 1, 0, 0, 0, 0, 0]
 arr_2 = [1, 1, 0, 0, 0, 0]
 arr_sin_ceros = [1, 1, 1, 1, 1]
@@ -72,4 +54,5 @@ lista_tests = [
     [arr_2, 2],
     [arr_sin_ceros, NO_HAY_CERO]
 ]
-tests(lista_tests)
+
+ejecutar_tests(lista_tests, indice_primer_cero)

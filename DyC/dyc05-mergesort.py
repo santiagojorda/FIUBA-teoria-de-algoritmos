@@ -4,6 +4,10 @@
 # Por las características de la herramienta, no podemos verificarlo de forma automática, 
 # pero se busca que se implemente con dicha restricción
 
+from tests import *
+
+# CODIGO
+
 def merge_sort(arr):
     tam = len(arr)
 
@@ -50,40 +54,9 @@ def merge(arr, inicio, mitad, final):
     for indice, val in enumerate(aux):
         arr[inicio + indice] = val
     return arr
-        
-    
-
-
-
-
-
 
 
 # TESTS
-
-def ejecutar_tests(lista_tests, funcion):   
-    exitos = 0
-    fallos = 0
-    for i, test in enumerate(lista_tests): 
-        arr, esperado = test
-        calculado = funcion(arr)
-        print("\n",
-            f"- CASO {i + 1}\n", 
-            f"Arreglo: {arr} \n", 
-            f"Arreglo esperado:  {esperado} \n",
-            f"Arreglo calculado: {calculado}\n")
-        if calculado == esperado:
-            print("")
-            exitos = exitos + 1
-        else:
-            print("--------- FALLO\n")
-            fallos = fallos + 1
-
-    print(f"RESUMEN TESTS \n",
-          f"    Exitos: {exitos} \n",
-          f"    Fallos: {fallos} \n")
-
-
 # numero, raiz esperado
 arr1 = [1, 2, 3, 4, 6, 5, 10, 7]
 arr1_or = [1, 2, 3, 4, 5, 6, 7, 10]

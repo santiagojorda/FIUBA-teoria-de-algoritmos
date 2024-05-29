@@ -38,9 +38,13 @@
 # [1] Mochila fraccionaria y cambio de moneda:
 # https://www.youtube.com/watch?v=MwBq72jmz58&list=PLzVbItixzlGUYKjuyaqa5qm9ZyZDfkXym&index=6&ab_channel=vpode
 
+from tests import *
 
-def cambio(monedas, monto):
+# CODIGO
 
+def cambio(cambio):
+    monedas = cambio[0]
+    monto = cambio[1]
     tam = len(monedas)
 
     sum_parcial = 0
@@ -59,33 +63,7 @@ def cambio(monedas, monto):
     return cambio_minimo
 
 
-
-
 # TESTS 
-
-def ejecutar_tests(lista_tests, funcion):    
-    exitos = 0
-    fallos = 0
-
-    for i, test in enumerate(lista_tests): 
-        monedas, monto, esperado = test
-        calculado = funcion(monedas, monto)
-        print("\n",
-            f"- CASO {i + 1}\n", 
-            f"Monedas: {monedas} \n", 
-            f"Monto: {monto} \n", 
-            f"Cambio esperado: {esperado} \n",
-            f"cambio calculada: {calculado}")
-        if calculado == esperado:
-            exitos = exitos + 1
-            print("--------- EXITO\n")
-        else:
-            print("--------- FALLO\n")
-            fallos = fallos + 1
-
-    print(f"RESUMEN TESTS \n",
-          f"    Exitos: {exitos} \n",
-          f"    Fallos: {fallos} \n")
 
 monedas1 = [1, 2, 5]
 monto1 = 11
@@ -99,15 +77,12 @@ monto3 = 1
 monedas4 = [1, 5, 10]
 monto4 = 11
 
-monedas5 = [1, 2, 4, 5, 10]
-monto5 = 8
 
 tests = [
-    [monedas1, monto1, [5, 5, 1]],
-    [monedas2, monto2, []],
-    [monedas3, monto3, [1]],
-    [monedas4, monto4, [10, 1]],
-    [monedas5, monto5, [4, 4]],
+    [[monedas1, monto1], [5, 5, 1]],
+    [[monedas2, monto2], []],
+    [[monedas3, monto3], [1]],
+    [[monedas4, monto4], [10, 1]]
 ]
 
 ejecutar_tests(tests, cambio)

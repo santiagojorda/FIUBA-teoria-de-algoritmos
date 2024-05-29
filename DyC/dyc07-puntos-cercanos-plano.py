@@ -10,6 +10,11 @@
 
 # MERGE SORT UTILIZANDO EN EL EJERICICIO 5 DE DYC
 # ORDENO Y
+
+from tests import *
+
+# AUXILIAR
+
 def merge_sort_x(arr):
     tam = len(arr)
 
@@ -106,8 +111,7 @@ def merge_y(arr, inicio, mitad, final):
         arr[inicio + indice] = val
     return arr
 
-# ALGORITMO
-
+# CODIGO
 
 def puntos_mas_cercanos(puntos):
 
@@ -120,8 +124,6 @@ def puntos_mas_cercanos(puntos):
     return [(0,0), (0,0)]
 
 
-
-
 # TESTS
 
 class Punto:
@@ -131,29 +133,6 @@ class Punto:
 
     def __repr__(self):
         return f"({self.x}, {self.y})"
-
-def ejecutar_tests(lista_tests, funcion):    
-    exitos = 0
-    fallos = 0
-
-    for i, test in enumerate(lista_tests): 
-        puntos, esperado = test
-        calculado = funcion(puntos)
-        print("\n",
-            f"- CASO {i + 1}\n", 
-            f"Puntos: {puntos} \n", 
-            f"Par esperado: {esperado} \n",
-            f"Par calculada: {calculado}")
-        if calculado == esperado:
-            exitos = exitos + 1
-            print("--------- EXITO\n")
-        else:
-            print("--------- FALLO\n")
-            fallos = fallos + 1
-
-    print(f"RESUMEN TESTS \n",
-          f"    Exitos: {exitos} \n",
-          f"    Fallos: {fallos} \n")
 
 # numero, raiz esperado
 p0 = Punto(0,13)

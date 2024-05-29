@@ -9,6 +9,10 @@
 # Por las características de la herramienta, no podemos verificarlo de forma automática, pero se busca 
 # que se implemente con dicha restricción
 
+from tests import *
+
+# CODIGO
+
 def parte_entera_raiz(n):
     if n == 0:
         return 0
@@ -39,29 +43,6 @@ def dividir_y_conquistar(n, raiz, cota_sup, cota_inf = None):
 
 
 # TESTS
-
-def ejecutar_tests(lista_tests, funcion):    
-    exitos = 0
-    fallos = 0
-
-    for i, test in enumerate(lista_tests): 
-        numero, esperado = test
-        calculado = funcion(numero)
-        print("\n",
-            f"- CASO {i + 1}\n", 
-            f"Numero: {numero} \n", 
-            f"Raiz cuadrada esperada: {esperado} \n",
-            f"Raiz cuadrada calculado: {calculado}")
-        if calculado == esperado:
-            print("")
-            exitos = exitos + 1
-        else:
-            print("--------- FALLO\n")
-            fallos = fallos + 1
-
-    print(f"RESUMEN TESTS \n",
-          f"    Exitos: {exitos} \n",
-          f"    Fallos: {fallos} \n")
 
 # numero, raiz esperado
 lista_tests = [

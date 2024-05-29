@@ -16,6 +16,16 @@
 # Por las características de la herramienta, no podemos verificarlo de forma automática, 
 # pero se busca que se implemente con dicha restricción
 
+from tests import *
+
+def ejecutar_pico(params):
+    arr = params[0]
+    inicio = params[1]
+    final = params[2]
+    return posicion_pico(arr, inicio, final)
+
+# CODIGO
+
 def posicion_pico(arr, inicio, final):
     if inicio == final:
         return inicio
@@ -61,35 +71,15 @@ def posicion_pico(arr, inicio, final):
 
 # TESTS
 
-def ejecutar_tests(lista_tests, funcion):    
-    exitos = 0
-    fallos = 0
-
-    for i, test in enumerate(lista_tests): 
-        arr, esperado = test
-        calculado = posicion_pico(arr, 0, len(arr) - 1)
-        print("\n",
-            f"- CASO {i + 1}\n", 
-            f"arreglo: {arr} \n", 
-            f"Posicion pico esperada: {esperado} \n",
-            f"Posicion pico calculado: {calculado}")
-        if calculado == esperado:
-            print("")
-            exitos = exitos + 1
-        else:
-            print("--------- FALLO\n")
-            fallos = fallos + 1
-
-    print(f"RESUMEN TESTS \n",
-          f"    Exitos: {exitos} \n",
-          f"    Fallos: {fallos} \n")
-    
-
 arr1 = [1, 3, 1, 0, -2]
 arr2 = [1, 2, 3, 1, 0, -2]
+
+def obtenerParams(arr):
+    return arr, 0, len(arr1) - 1
+
 lista_tests = [
-    [arr1, 1],
-    [arr2, 2],
+    [obtenerParams(arr1),  1],
+    [obtenerParams(arr2), 2],
     
 ]
-ejecutar_tests(lista_tests, posicion_pico)
+ejecutar_tests(lista_tests, ejecutar_pico)

@@ -17,7 +17,9 @@
 # Nota sobre RPL: en este ejercicio se pide cumplir la tarea "con un algoritmo Greedy". Por las características de 
 # la herramienta, no podemos verificarlo de forma automática, pero se busca que se implemente con dicha restricción
 
-# ---
+from tests import *
+
+# CODIGO
 
 INICIO = 0
 FINALIZACION = 1
@@ -132,30 +134,7 @@ def asignar_mafias(pedidos):
 
 
 
-# --- TESTS
-
-def ejecutar_tests(lista_tests, funcion):    
-    exitos = 0
-    fallos = 0
-
-    for i, test in enumerate(lista_tests): 
-        kilometros, esperado = test
-        calculado = funcion(kilometros)
-        print("\n",
-            f"- CASO {i + 1}\n", 
-            f"Kilotemtros: {kilometros} \n", 
-            f"Set esperado: {esperado} \n",
-            f"Set calculada: {calculado}")
-        if calculado == esperado:
-            exitos = exitos + 1
-            print("--------- EXITO\n")
-        else:
-            print("--------- FALLO\n")
-            fallos = fallos + 1
-
-    print(f"RESUMEN TESTS \n",
-          f"    Exitos: {exitos} \n",
-          f"    Fallos: {fallos} \n")
+# TESTS
 
 kilometros_test = [ # [provistos, esperados]
     # [ [],                                                           [] ],

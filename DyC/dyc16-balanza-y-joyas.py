@@ -14,9 +14,10 @@
 # Si el primer platillo es más pesado, balanza devuelve 1.
 # Si el segundo platillo es más pesado, balanza devuelve -1.
 
-# --- DEPENDENCIAS
 
-from utils.tests import *
+from tests import *
+
+# AUXILIAR
 
 # balanza ES UNA FUNCION EXTERNA
 PESAN_LO_MISMO = 0
@@ -34,7 +35,7 @@ def balanza(arr1, arr2):
     else:
         return PESAN_LO_MISMO
     
-# --- CODE 
+# CODIGO
 
 # from balanza import * 
 

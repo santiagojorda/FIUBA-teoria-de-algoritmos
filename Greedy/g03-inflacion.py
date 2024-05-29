@@ -23,6 +23,10 @@
 # (precios crecientes exponencialmente) para tomar decisiones locales optimas en cada paso / dia, 
 # lo que garantiza que siempre encuentre el precio minimo al que podemos comprar todos los productos.
 
+from tests import *
+
+# CODIGO
+
 def merge_sort(arr):
     tam = len(arr)
 
@@ -94,30 +98,6 @@ def precios_inflacion(R):
 
 
 # TESTS 
-
-def ejecutar_tests(lista_tests, funcion):    
-    exitos = 0
-    fallos = 0
-
-    for i, test in enumerate(lista_tests): 
-        productos, esperado = test
-        calculado = funcion(productos)
-        print("\n",
-            f"- CASO {i + 1}\n", 
-            f"Productos: {productos} \n", 
-            f"Precio minimo esperado: {esperado} \n",
-            f"Precio minimo calculado: {calculado}")
-        if calculado == esperado:
-            exitos = exitos + 1
-            print("--------- EXITO\n")
-        else:
-            print("--------- FALLO\n")
-            fallos = fallos + 1
-
-    print(f"RESUMEN TESTS \n",
-          f"    Exitos: {exitos} \n",
-          f"    Fallos: {fallos} \n")
-
 
 tests = [
     [[10], 10],
